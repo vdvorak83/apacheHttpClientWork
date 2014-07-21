@@ -1,0 +1,7 @@
+/CTLBankWeb/welcome.jsp
+/CTLBankWeb/App?action=login&uid={uid}&passwd=password
+/CTLBankWeb/App?action=acctSummary
+/CTLBankWeb/App?action=Deposit&amount={amt}&accID={uid}01
+/CTLBankWeb/App?action=Withdraw&amount={amt}&accID={uid}01
+/CTLBankWeb/App?action=custProfile
+/CTLBankWeb/App?action=logout
