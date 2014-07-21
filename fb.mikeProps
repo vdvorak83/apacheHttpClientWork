@@ -1,0 +1,11 @@
+#Mon Jan 14 14:54:40 EST 2014
+host=http://192.168.1.175:9085
+urlFile=fb.seq
+debug=true
+# logLevel=fine  # If debug not true, this is ignored. If debug true and this NOT specd, uses finest
+tocons=false
+repeat=xxxRepeatCnt
+rps=200
+vars={uid}=1:25;{amt}=33:36;{time}=test
+authIds=mobusr1,mobusr2,mcasile
+authPWs=pwusr1,pwusr2,pwmike
