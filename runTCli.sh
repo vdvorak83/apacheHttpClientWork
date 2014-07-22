@@ -12,5 +12,5 @@ case $# in
 esac
 repeatCnt=${totSessions}/${numUsers}
 sed 's/xxxRepeatCnt/'${repeatCnt}'/' fb.mikeProps >fb.runProps
-echo java -cp httpClient.jar:swAuto/lib/http/commons-logging-1.1.3.jar:swAuto/lib/http/httpclient-4.3.3.jar:swAuto/lib/http/httpcore-4.3.2.jar:swAuto/lib/http/commons-codec-1.6.jar com/ibm/mike/samples/HttpClientDriver fb.runProps ${numUsers} ${numDmps} ${dumpWait} ${dumpIntvl}
-java -cp httpClient.jar:swAuto/lib/http/commons-logging-1.1.3.jar:swAuto/lib/http/httpclient-4.3.3.jar:swAuto/lib/http/httpcore-4.3.2.jar:swAuto/lib/http/commons-codec-1.6.jar com/ibm/mike/samples/HttpClientDriver fb.runProps ${numUsers} ${numDmps} ${dumpWait} ${dumpIntvl} &
+echo java -cp swAuto/lib/rsrchUtils.jar:swAuto/lib/http/commons-logging-1.1.3.jar:swAuto/lib/http/httpclient-4.3.3.jar:swAuto/lib/http/httpcore-4.3.2.jar:swAuto/lib/http/commons-codec-1.6.jar com/ibm/mike/samples/HttpClientDriver fb.runProps ${numUsers} ${numDmps} ${dumpWait} ${dumpIntvl}
+java -cp swAuto/lib/rsrchUtils.jar:swAuto/lib/http/commons-logging-1.1.3.jar:swAuto/lib/http/httpclient-4.3.3.jar:swAuto/lib/http/httpcore-4.3.2.jar:swAuto/lib/http/commons-codec-1.6.jar com/ibm/mike/samples/HttpClientDriver fb.runProps ${numUsers} ${numDmps} ${dumpWait} ${dumpIntvl} &

@@ -8,4 +8,9 @@ repeat=xxxRepeatCnt
 rps=200
 vars={uid}=1:25;{amt}=33:36;{time}=test
 authIds=mobusr1,mobusr2,mcasile
-authPWs=pwusr1,pwusr2,pwmike
+authPWs=mobusr1,mobusr2,mcjd101c
+# useContext uses the httpContext, otherwise we try to brute force on the headers
+useContext=true
+authHost=192.168.1.175
+authPort=9085
+
