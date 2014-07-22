@@ -1,0 +1,1442 @@
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver setupAuth
+FINE: Ids: mobusr1,mobusr2,mcasile  Pws: mobusr1,mobusr2,mcjd101c useContext prop: true
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver setupAuth
+FINER: Encode String mobusr1:mobusr1
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver setupAuth
+FINER: Encode String mobusr2:mobusr2
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver setupAuth
+FINER: Encode String mcasile:mcjd101c
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver setupThreadDumps
+INFO: Will take 0 javaCores. First wait is 0 and interval is 0. Mon Intvls to dump on: [I@a495c937
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver main
+FINER:   URL: /CTLBankWeb/welcome.jsp
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver main
+FINER:   URL: /CTLBankWeb/App?action=login&uid={uid}&passwd=password
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver main
+FINER:   URL: /CTLBankWeb/App?action=acctSummary
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver main
+FINER:   URL: /CTLBankWeb/App?action=Deposit&amount={amt}&accID={uid}01
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver main
+FINER:   URL: /CTLBankWeb/App?action=Withdraw&amount={amt}&accID={uid}01
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver main
+FINER:   URL: /CTLBankWeb/App?action=custProfile
+Jul 22, 2014 4:30:23 PM com.ibm.mike.samples.HttpClientDriver main
+FINER:   URL: /CTLBankWeb/App?action=logout
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver setupHttpClient
+FINER: Constructing cm/httpClient for cbc obj: com.ibm.mike.samples.HttpClientDriver@1550855c
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser constructor
+FINER: Auth providerIdx: 0  provider: [principal: mobusr1]  httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser constructor
+FINER: Auth providerIdx: 1  provider: [principal: mobusr2]  httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0run
+FINE: Start Thd: WrkThread:0  lowUid: 1
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1run
+FINE: Start Thd: WrkThread:1  lowUid: 25,001
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 0 of 128; total allocated: 0 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 0 of 128; total allocated: 0 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.HttpClientConnectionOperator connect
+FINE: Connecting to /192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.HttpClientConnectionOperator connect
+FINE: Connecting to /192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.HttpClientConnectionOperator connect
+FINE: Connection established 192.168.0.170:42524<->192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.HttpClientConnectionOperator connect
+FINE: Connection established 192.168.0.170:42525<->192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/welcome.jsp HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/welcome.jsp HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/welcome.jsp  StatusCd: 401
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/welcome.jsp  StatusCd: 401
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 2; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 2; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 2; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=login&uid=25001&passwd=password HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=login&uid=1&passwd=password HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=login&uid=25001&passwd=password  StatusCd: 401
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=login&uid=1&passwd=password  StatusCd: 401
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=acctSummary HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=acctSummary HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=acctSummary  StatusCd: 401
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=acctSummary  StatusCd: 401
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=Deposit&amount=50&accID=2500101 HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=Deposit&amount=50&accID=101 HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=Deposit&amount=50&accID=2500101  StatusCd: 401
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=Deposit&amount=50&accID=101  StatusCd: 401
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=Withdraw&amount=50&accID=2500101 HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=Withdraw&amount=50&accID=101 HTTP/1.1
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=Withdraw&amount=50&accID=2500101  StatusCd: 401
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:24 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:24 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=Withdraw&amount=50&accID=101  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=custProfile HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=custProfile HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=custProfile  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=custProfile  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=logout HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=logout HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=logout  StatusCd: 401
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:52 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=logout  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/welcome.jsp HTTP/1.1
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/welcome.jsp HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/welcome.jsp  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/welcome.jsp  StatusCd: 401
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=login&uid=25002&passwd=password HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=login&uid=2&passwd=password HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=login&uid=25002&passwd=password  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=login&uid=2&passwd=password  StatusCd: 401
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=acctSummary HTTP/1.1
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=acctSummary HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=acctSummary  StatusCd: 401
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=acctSummary  StatusCd: 401
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=Deposit&amount=51&accID=2500201 HTTP/1.1
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=Deposit&amount=51&accID=201 HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=Deposit&amount=51&accID=2500201  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=Deposit&amount=51&accID=201  StatusCd: 401
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 2; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=Withdraw&amount=51&accID=2500201 HTTP/1.1
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=Withdraw&amount=51&accID=201 HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=Withdraw&amount=51&accID=2500201  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=Withdraw&amount=51&accID=201  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=custProfile HTTP/1.1
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=custProfile HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=custProfile  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=custProfile  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> GET /CTLBankWeb/App?action=logout HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0handleRetryableRequest
+FINER: httpGet header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager requestConnection
+FINE: Connection request: [route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-0 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager leaseConnection
+FINE: Connection leased: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 0; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> GET /CTLBankWeb/App?action=logout HTTP/1.1
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Connection: keep-alive
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> Host: 192.168.1.175:9085
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onRequestSubmitted
+FINE: http-outgoing-1 >> User-Agent: Apache-HttpClient/4.3.3 (Java 1.5 minimum; Java/1.6.0)
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-0 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << HTTP/1.1 401 Unauthorized
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:1handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr2]
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << X-Powered-By: Servlet/3.0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=logout  StatusCd: 401
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << WWW-Authenticate: Basic realm="Default Realm"
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Language: en-US
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Content-Length: 0
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Date: Tue, 22 Jul 2014 20:37:53 GMT
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.headers onResponseReceived
+FINE: http-outgoing-1 << Server: WebSphere Application Server
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 0][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriverOneUser WrkThread:0handleRetryableRequest
+FINER: statusCd: 401 httpCliCtx [principal: mobusr1]
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 0][route: {}->http://192.168.1.175:9085][total kept alive: 1; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINE: URI: http://192.168.1.175:9085/CTLBankWeb/App?action=logout  StatusCd: 401
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:1sessionLoop
+FINER: Results: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: httpResponse header: 
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection [id: 1][route: {}->http://192.168.1.175:9085] can be kept alive indefinitely
+Jul 22, 2014 4:30:25 PM org.apache.http.impl.conn.PoolingHttpClientConnectionManager releaseConnection
+FINE: Connection released: [id: 1][route: {}->http://192.168.1.175:9085][total kept alive: 2; route allocated: 2 of 128; total allocated: 2 of 256]
+Jul 22, 2014 4:30:25 PM com.ibm.mike.samples.HttpClientDriver WrkThread:0sessionLoop
+FINER: Results: 
