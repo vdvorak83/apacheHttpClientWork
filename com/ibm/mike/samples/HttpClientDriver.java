@@ -17,22 +17,23 @@ import java.util.logging.SimpleFormatter;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
-// import org.apache.http.HttpHeaders;
-// import org.apache.http.auth.AuthScope;
+import org.apache.http.HttpHeaders;
 import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.AuthCache;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.impl.auth.BasicScheme;
+import org.apache.http.impl.client.BasicAuthCache;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.util.EntityUtils;
-// import org.apache.commons.httpclient.auth.AuthScope ;
-
 
 import com.ibm.jvm.Dump;
 
@@ -51,9 +52,10 @@ public class HttpClientDriver {
 	private static PoolingHttpClientConnectionManager cm = null ;
 	private static CloseableHttpClient httpClient = null ;
 	private static boolean useAuth = false ;
+	private static boolean useContext = true ;
 	private static String [] authHeaders = null ;
 	private static CredentialsProvider [] credentialsProvider = null ;
-	private static AuthScope authScopeAll = new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT) ;
+	private static AuthScope authScope = null ;
 
 	/**
 	 * thread that will go thru every n seconds (30 by dflt) and report on how many are thru based on each threads reporting.
@@ -118,6 +120,7 @@ public class HttpClientDriver {
 		URI [] baseURIs ;
 		Vector<Integer>thdStatusVector ;
 		HttpClientContext httpClientContext = null ;
+		String thdAuthHeader = null ;
 
 		/**
 		 * Save off all key information for this thread/user
@@ -128,7 +131,7 @@ public class HttpClientDriver {
 		 * @param baseURIs For requests w/no variable substitution, URI is built once only
 		 */
 		OneUser(int thdIdx, int lowUid, int highUid, int numCycles, int reqPerSecond,
-			String [][] urlInfo, URI [] baseURIs, Vector<Integer>thdStatusVector) { 
+			String [][] urlInfo, URI [] baseURIs, Vector<Integer>thdStatusVector, AuthScope authScope) { 
 			this.thdIdx = thdIdx ;
 			this.lowUid = lowUid ;
 			this.highUid = highUid ;
@@ -139,12 +142,18 @@ public class HttpClientDriver {
 			this.thdStatusVector = thdStatusVector ;
 			if (useAuth) {
 				int credProIdx = thdIdx % credentialsProvider.length ;
+				thdAuthHeader = authHeaders[credProIdx] ;
 				httpClientContext = HttpClientContext.create() ;
 				httpClientContext.setCredentialsProvider(credentialsProvider[credProIdx]) ;
+				AuthCache authCache = new BasicAuthCache() ;
+				BasicScheme basicScheme = new BasicScheme() ;
+				authCache.put(new HttpHost(authScope.getHost(), authScope.getPort()), basicScheme) ;
+				
+				httpClientContext.setAuthCache(authCache);
 				if (hcdLogger.isLoggable(Level.FINER))
 					hcdLogger.logp(Level.FINER, thisClass+"OneUser", "constructor", 
 						"Auth providerIdx: {0}  provider: {1}  httpCliCtx {2}",
-						new Object [] { credProIdx, credentialsProvider[credProIdx].getCredentials(authScopeAll).getUserPrincipal(),
+						new Object [] { credProIdx, credentialsProvider[credProIdx].getCredentials(authScope).getUserPrincipal(),
 						httpClientContext.getCredentialsProvider().getCredentials(AuthScope.ANY).getUserPrincipal()});
 			}
 		}
@@ -158,7 +167,6 @@ public class HttpClientDriver {
 			}
 			long startSecond = System.currentTimeMillis() ;
 
-			String curAuthStr = null  ;
     	    for (int i = 0; i < numCycles; i++) {		// One loop thru for each session/cycle
 				if (i % 1000 == 0)  thdStatusVector.set(thdIdx, i);
 				curAmt++ ;
@@ -177,17 +185,13 @@ public class HttpClientDriver {
 				if (++curUid > highUid) {
 					curUid = lowUid ;  curAmt = 50 ;
 				}
-/*				if (useAuth) {
-					if (curAuth >= authHeaders.length)  curUid = 0 ;
-					curAuthStr = authHeaders[curAuth++] ;
-				} */
 //				sessionLoop1(curUid, curAmt) ;
-				sessionLoop(curUid, curAmt, curAuthStr) ;
+				sessionLoop(curUid, curAmt) ;
 			}
 			thdStatusVector.set(thdIdx, numCycles);
 		}
 
-		private void sessionLoop(int curUid, int curAmt, String authStr) {		
+		private void sessionLoop(int curUid, int curAmt) {		
 			final String METHOD = this.getName()+"sessionLoop" ;
 			String sessionId = null ;
 			for (int j = 0; j < baseURIs.length; j++) {		// In each cycle, go thru the URIs
@@ -196,7 +200,7 @@ public class HttpClientDriver {
 				// TODO: I should not have to mess so much w/session, will try to resolve later
        			// TODO: See if I can use reUse CloseableHttpResponse object
        			// TODO: Key point is to split out real request to be generic and retriable (retryCnt)
-       			CloseableHttpResponse httpResponse = handleRetryableRequest(sessionId, curURI, 0, authStr) ;
+       			CloseableHttpResponse httpResponse = handleRetryableRequest(sessionId, curURI, 0) ;
        			if (httpResponse == null)  continue ;		// Exception/error logged in called method
        			HttpEntity htEntity = null ;
        			try {
@@ -232,26 +236,26 @@ public class HttpClientDriver {
 			}
 		}
 
-		private CloseableHttpResponse handleRetryableRequest(String sessionId, URI curURI, int retryCnt, String authStr) {
+		private CloseableHttpResponse handleRetryableRequest(String sessionId, URI curURI, int retryCnt) {
 			final String METHOD = this.getName()+"handleRetryableRequest" ;
 			try {
 				HttpGet httpGet = new HttpGet(curURI) ;
 				if (sessionId != null)  httpGet.addHeader("Cookie", sessionId);
 				httpGet.setHeader("Connection", "keep-alive");					
-/*				if (useAuth) {
-					httpGet.setHeader(HttpHeaders.AUTHORIZATION, authStr) ;
-				}   This is out because preFilling headers caught other issues */
+				if (useAuth && !useContext) {
+					httpGet.setHeader(HttpHeaders.AUTHORIZATION, thdAuthHeader) ;
+				}   // This ws out because preFilling headers caught other issues
 				if (hcdLogger.isLoggable(Level.FINER)) {
 					for (Header curHdr : httpGet.getAllHeaders()) {
 						hcdLogger.logp(Level.FINER, thisClass, METHOD, "httpGet header: ", curHdr.getValue()) ; 
 					}
 				}
-				CloseableHttpResponse htResp = (useAuth) ? httpClient.execute(httpGet, httpClientContext) :
+				CloseableHttpResponse htResp = (useAuth && useContext) ? httpClient.execute(httpGet, httpClientContext) :
 					httpClient.execute(httpGet) ;
 				if (useAuth && hcdLogger.isLoggable(Level.FINER))
 					hcdLogger.logp(Level.FINER, thisClass+"OneUser", METHOD, "statusCd: {0} httpCliCtx {1}",
 						new Object [] { htResp.getStatusLine().getStatusCode(), 
-						httpClientContext.getCredentialsProvider().getCredentials(AuthScope.ANY).getUserPrincipal()});
+						httpClientContext.getCredentialsProvider().getCredentials(authScope).getUserPrincipal()});
 
 /*				if (htResp.getStatusLine().getStatusCode() == 401)
 					throw new Exception("Got a 401, hopefully reTry will fix it") ; */
@@ -260,7 +264,7 @@ public class HttpClientDriver {
 				if (retryCnt < 2) {	// Route exceptions, retry twice only
 					hcdLogger.logp(Level.INFO, thisClass, METHOD, "RetryCnt: {0} curURI: {1}",
 						new Object [] { retryCnt, curURI}) ;
-					return handleRetryableRequest(sessionId, curURI, ++retryCnt, authStr) ;
+					return handleRetryableRequest(sessionId, curURI, ++retryCnt) ;
 				} else
 					hcdLogger.logp(Level.WARNING, thisClass, METHOD, "Exception executing get request. URI: {0}  Exception: {1}",
 						new Object [] { curURI, e }) ;
@@ -345,7 +349,7 @@ public class HttpClientDriver {
 				me.setupHttpClient() ;
 				for (int i = 0; i < numThreads; i++) {
 					wrkThreads[i] = me.new OneUser(i, uidRange*i+1, uidRange*i+uidRange, numCycles, rps,
-						urlRepos, urlContent, threadStatusVector) ;
+						urlRepos, urlContent, threadStatusVector, authScope) ;
 					wrkThreads[i].setName("WrkThread:"+i);
 					wrkThreads[i].start();
 				}
@@ -406,19 +410,24 @@ public class HttpClientDriver {
 		String uidParm = parmProps.getProperty("authIds") ;
 		String pwParm = parmProps.getProperty("authPWs") ;
 		if (hcdLogger.isLoggable(Level.FINE)) 
-			hcdLogger.logp(Level.FINE, thisClass, METHOD, "Ids: {0}  Pws: {1}",
-				new Object [] { uidParm, pwParm }) ;
+			hcdLogger.logp(Level.FINE, thisClass, METHOD, "Ids: {0}  Pws: {1} useContext prop: {2}",
+				new Object [] { uidParm, pwParm, parmProps.getProperty("useContext") }) ;
 		if (uidParm == null || pwParm == null) return ;		// Initial values assume no uid/pw
 		useAuth = true ;
+		useContext = ("true".equalsIgnoreCase(parmProps.getProperty("useContext"))) ? true : false ;
+		String authHost = parmProps.getProperty("authHost") ;
+		int authPort = Integer.parseInt(parmProps.getProperty("authPort")) ;
+		authScope = new AuthScope(authHost, authPort) ;
 		String [] uidList = uidParm.split(",") ;
 		String [] pwList = pwParm.split(",") ;
 		authHeaders = new String[uidList.length] ;
 		credentialsProvider = new CredentialsProvider[uidList.length] ;
 		for (int i = 0 ; i < uidList.length; i++) {
 			String authStr = uidList[i] + ":" + pwList[i] ;
-			UsernamePasswordCredentials unpc = new UsernamePasswordCredentials(uidList[i], pwList[i]) ;
 			credentialsProvider[i] = new BasicCredentialsProvider() ;
-			credentialsProvider[i].setCredentials(AuthScope.ANY, unpc);
+			credentialsProvider[i].setCredentials(authScope,
+	            new UsernamePasswordCredentials(uidList[i], pwList[i]));
+
 			if (hcdLogger.isLoggable(Level.FINER)) 
 				hcdLogger.logp(Level.FINER, thisClass, METHOD, "Encode String {0}", authStr) ;
 			byte [] encodedAuth = Base64.encodeBase64(authStr.getBytes(Charset.forName("US-ASCII"))) ;
